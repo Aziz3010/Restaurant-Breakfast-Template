@@ -14,12 +14,227 @@
 }
 
 body{
-    background-color: var(--bodyBColor);
+    background-color: var(--bodyBgColor);
 }
 
 ul{
+    width: fit-content;
     list-style: none;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 0;
 }
+
+ul li a{
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--mainColor);
+    font-weight: 700;
+    font-size: 14px;
+    transition: color 400ms;
+    padding: 1rem 0;
+    margin-right: 2rem;
+    border-bottom: 2px solid transparent;
+}
+
+ul li a:hover{
+    text-decoration: none;
+    color: var(--secondColor);
+    border-bottom: 2px solid var(--secondColor);
+}
+
+ul li:last-child a{
+    margin-right: 0px;
+}
+
+.activeA{
+    color: var(--secondColor);
+    border-bottom: 2px solid var(--secondColor);
+}
+
+/* Navbar */
+
+#Navbar{
+    background-color: transparent;
+    padding: 1rem 0rem;
+    position: fixed;
+    width: 100%;
+    z-index: 9999;
+}
+
+#Navbar .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* logo */
+
+#Navbar .container .logo{
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    order: 2;
+
+}
+
+#Navbar .container .logo .menuberger{
+    border-radius: 5px;
+    width: 50px;
+    padding: .5rem;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+    display: none;
+}
+
+#Navbar .container .logo .menuberger span{
+    background-color: var(--mainColor);
+    height: 3px;
+    width: 100%;
+    border-radius: 5px;
+    margin: 3px 0;
+    display: block;
+}
+
+/* leftnav */
+
+#Navbar .container .leftnav{
+    width: 40%;
+    order: 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+/* rightnav */
+
+#Navbar .container .rightnav{
+    width: 40%;
+    order: 3;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+@media screen and (max-width:991px) {
+    ul li a{
+        margin-right: 1rem;
+    }   
+}
+
+@media screen and (max-width:767px){
+    #Navbar .container{
+        flex-direction: column;
+    }
+
+    #Navbar .container .logo{
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #Navbar .container .logo .menuberger{
+        display: flex;
+    }
+
+    #Navbar .container .rightnav{
+        width: 100%;
+        order: 3;
+    }
+
+    #Navbar .container .leftnav{
+        margin-top: 1rem;
+        order: 2;
+        width: 100%;
+    }
+
+    #Navbar .container .rightnav,
+    #Navbar .container .leftnav{
+        display: none;
+    }
+}
+
+@media screen and (max-width:290px){
+    #Navbar .container .rightnav ul,
+    #Navbar .container .leftnav ul{
+        flex-direction: column;
+    }
+
+    #Navbar .container .rightnav ul a,
+    #Navbar .container .leftnav ul a{
+        margin: 0;
+    }
+    
+}
+
+/* Home page */
+
+#Home{
+    background-image: url(../img/Place\ Your\ Image\ Here\ \(Double\ Click\ to\ Edit\)-2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 0;
+    padding-top: 4rem;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#Home::after{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(31, 31, 35, .9);
+    z-index: -1;
+}
+
+#Home .container .row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#Home .container .imageBox{
+    padding: 3.5rem;
+}
+
+#Home .container .image img{
+    width: 100%;
+}
+
+#Home .container .text h1{
+    color: var(--secondColor);
+    font-weight: 700;
+    font-size: 2.3rem;
+}
+
+#Home .container .text p{
+    font-weight: 700;
+    color: var(--mainColor);
+}
+
+#Home .container .text a{
+    background-color: var(--secondColor);
+    padding: .8rem 1.3rem;
+    border-radius: 5px;
+    display: block;
+    width: fit-content;
+    text-decoration: none;
+    color: var(--bodyBgColor);
+    font-weight: 700;
+    transition: color 400ms;
+}
+
+#Home .container .text a:hover{
+    color: #fff;
+}
+
+/* About Us */
