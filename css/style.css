@@ -1,0 +1,25 @@
+:root{
+    --bodyBgColor:#1d1d23;
+    --mainColor:#ffffff;
+    --secondColor:#e58f00;
+    --footerBgColor:#35353b;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+body{
+    background-color: var(--bodyBColor);
+}
+
+ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
