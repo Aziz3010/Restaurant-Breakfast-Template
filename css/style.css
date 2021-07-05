@@ -14,7 +14,9 @@
 }
 
 body{
+    height: 3000;
     background-color: var(--bodyBgColor);
+    color: var(--mainColor);
 }
 
 ul{
@@ -61,7 +63,8 @@ ul li:last-child a{
     padding: 1rem 0rem;
     position: fixed;
     width: 100%;
-    z-index: 9999;
+    z-index: 2000;
+    background-color: rgba(150,150,150,.5);
 }
 
 #Navbar .container{
@@ -178,11 +181,10 @@ ul li:last-child a{
     background-image: url(../img/Place\ Your\ Image\ Here\ \(Double\ Click\ to\ Edit\)-2.png);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
+    height: 100vh;
     position: relative;
     z-index: 0;
-    padding-top: 4rem;
-    height: 100vh;
+    padding: 7rem 0 4rem 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -197,13 +199,11 @@ ul li:last-child a{
 }
 
 #Home .container .row{
-    display: flex;
-    justify-content: center;
     align-items: center;
 }
 
-#Home .container .imageBox{
-    padding: 3.5rem;
+#Home .container .imageBox .image{
+    text-align: center;
 }
 
 #Home .container .image img{
@@ -213,12 +213,15 @@ ul li:last-child a{
 #Home .container .text h1{
     color: var(--secondColor);
     font-weight: 700;
-    font-size: 2.3rem;
+    font-size: 2rem;
+    margin: 0;
 }
 
 #Home .container .text p{
+    font-size: 15px;
     font-weight: 700;
     color: var(--mainColor);
+    margin: .5rem 0;
 }
 
 #Home .container .text a{
@@ -237,4 +240,174 @@ ul li:last-child a{
     color: #fff;
 }
 
+@media screen and (max-width:767px) {
+    #Home .container .imageBox{
+        display: none;
+    }
+}
+
 /* About Us */
+
+#About{
+    padding: 4rem 0;
+}
+
+#About .row{
+    justify-content: center;
+    align-items: center;
+}
+
+#About .row .imageBox{
+    display: flex;
+    justify-content: center;
+}
+
+#About .row .imageBox .image{
+    width: 75%;
+}
+
+#About .row .imageBox img{
+    width: 100%;
+}
+
+#About .row .textBox .text{
+    font-weight: 700;
+}
+
+#About .row .textBox .text h2{
+    font-size: 2.5rem;
+}
+
+#About .row .textBox .text p{
+    font-size: 14px;
+}
+
+@media screen and (max-width:767px) {
+    #About .row .textBox{
+        order: 1;
+        margin-bottom: 1rem;
+        width: 75%;
+    }
+    #About .row .imageBox{
+        order: 2;
+    }
+    #About .row .imageBox img{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:576px){
+    #About .container{
+        width: 80%;
+    }
+    #About .row .imageBox .image{
+        width: 100%;
+    }
+    #About .row .textBox{
+        width: 100%;
+    }
+}
+
+/* Quality */
+
+/* Gallary */
+
+#Gallary{
+    padding: 3rem 0;
+    text-align: center;
+}
+
+#Gallary h2{
+    font-weight: 700;
+}
+
+#Gallary .row{
+    margin-top: 4rem;
+}
+
+#Gallary .imgBox{
+    margin-bottom: 1.5rem;
+}
+
+#Gallary .imgBox .image img{
+    width: 90%;
+}
+
+/* Enjoy */
+
+#Enjoy{
+    padding: 4rem 0;
+    background-image: url(../img/5.png);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#Enjoy .text{
+    background-color: rgba(50, 50, 55, .4);
+    text-align: center;
+    padding: 2rem;
+    width: fit-content;
+    border: 2px solid var(--secondColor);
+}
+
+#Enjoy .text h3{
+    margin-bottom: 1.5rem;
+}
+
+#Enjoy .text p{
+    margin: 0;
+}
+
+/* Menu */
+
+#Menu{
+    padding: 4rem 0;
+}
+
+#Menu h2{
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+#Menu .item .image img{
+    width: 100%;
+}
+
+#Menu .item .text{
+    margin: 1rem 0 0 0;
+}
+
+#Menu .item .text h5{
+    text-transform: uppercase;
+    color: var(--secondColor);
+    margin: 0 0 .5rem 0;
+}
+
+#Menu .item .text p{
+    margin: 0 0 .5rem 0;
+    font-size: 13px;
+}
+
+#Menu .item .text span{
+    display: block;
+    color: var(--secondColor);
+    font-weight: 700;
+    font-size: 17px;
+}
+
+@media screen and (max-width:575px) {
+    #Menu .item .text{
+        margin: 1rem 0 2rem 0;
+    }
+
+    #Menu .col-md-4:last-child .text{
+        margin: 1rem 0 0 0;
+    }
+}
+
+/* BestMeal */
