@@ -366,7 +366,7 @@ ul li:last-child a{
 /* Menu */
 
 #Menu{
-    padding: 4rem 0;
+    padding: 7rem 0;
 }
 
 #Menu h2{
@@ -411,3 +411,152 @@ ul li:last-child a{
 }
 
 /* BestMeal */
+
+#BestMeal{
+    padding: 3rem 0;
+    background-color: var(--secondColor);
+    position: relative;
+}
+
+#BestMeal .image{
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    transform: translate(-50%,-50%);
+    width: 30%;
+}
+
+#BestMeal .image img{
+    width: 100%;
+}
+
+#BestMeal .container{
+    width: 50%;
+}
+
+#BestMeal .text{
+    width: fit-content;
+    padding: 1.5rem;
+    margin-left: auto;
+}
+
+#BestMeal .text h2{
+    margin-bottom: 1.5rem;
+}
+
+#BestMeal .text p{
+    margin: 0;
+}
+
+@media screen and (max-width:1240px) {
+    #BestMeal .image{
+        left: 25%;
+        transform: translate(-50%,-50%);
+    }   
+}
+
+@media screen and (max-width:1040px) {
+    #BestMeal .image{
+        left: 20%;
+        transform: translate(-50%,-50%);
+    }   
+}
+
+@media screen and (max-width:940px) {
+    #BestMeal .image{
+        display: none;
+    }   
+
+    #BestMeal .container{
+        width: 75%;
+    }
+
+    #BestMeal .text{
+        margin: auto;
+    }
+}
+
+/* Footer */
+
+Footer{
+    padding: 6rem 0 2rem 0;
+    background-color: var(--footerBgColor);
+}
+
+Footer .logo-image{
+    width: 30%;
+    margin: auto;
+}
+
+Footer .logo-image img{
+    width: 100%;
+}
+
+Footer .footerlinks{
+    margin-top: 2rem;
+}
+
+Footer .footerlinks ul{
+    margin: auto;
+}
+
+Footer .footerlinks ul li a{
+    border-bottom: none;
+}
+
+Footer .footerlinks ul li a:hover{
+    color: #fff;
+    border-bottom: none;
+}
+
+@media screen and (max-width:474px) {
+    Footer .footerlinks ul{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+}
+
+Footer .social{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    margin: 2rem auto;
+}
+
+Footer .social .icon{
+    background-color: #fff;
+    color: var(--bodyBgColor);
+    margin-right: 1rem;
+    padding: 1rem;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 500ms , color 500ms;
+}
+
+Footer .social .icon:last-child{
+    margin-right: 0rem;
+}
+
+Footer .social .icon:hover{
+    background-color: #0665f5;
+    color: #fff;
+}
+
+@media screen and (max-width:229px) {
+    Footer .social{
+        flex-wrap: wrap;
+    }
+    Footer .social .icon{
+        margin: 0 5px 5px 0;
+        width: 30px;
+        height: 30px;
+    }
+}
