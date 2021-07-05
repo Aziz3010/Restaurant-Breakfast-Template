@@ -64,7 +64,7 @@ ul li:last-child a{
     position: fixed;
     width: 100%;
     z-index: 2000;
-    background-color: rgba(150,150,150,.5);
+    transition: background-color 500ms;
 }
 
 #Navbar .container{
@@ -483,12 +483,12 @@ Footer{
     background-color: var(--footerBgColor);
 }
 
-Footer .logo-image{
-    width: 30%;
-    margin: auto;
+Footer .container .logo-image{
+    width: 350px;
+    margin: 0 auto;
 }
 
-Footer .logo-image img{
+Footer .container .logo-image img{
     width: 100%;
 }
 
@@ -507,15 +507,6 @@ Footer .footerlinks ul li a{
 Footer .footerlinks ul li a:hover{
     color: #fff;
     border-bottom: none;
-}
-
-@media screen and (max-width:474px) {
-    Footer .footerlinks ul{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
-    }
 }
 
 Footer .social{
@@ -550,12 +541,51 @@ Footer .social .icon:hover{
     color: #fff;
 }
 
-@media screen and (max-width:229px) {
+@media screen and (max-width:395px) {
+    Footer .container .logo-image{
+        width: 300px;
+    }
+}
+
+@media screen and (max-width:345px) {
+    Footer .container .logo-image{
+        width: 250px;
+    }   
+}
+
+@media screen and (max-width:295px) {
+    Footer .container .logo-image{
+        width: 200px;
+    }    
+}
+
+@media screen and (max-width:393px) {
+    Footer .footerlinks ul li:nth-child(4) a{
+        margin: 0;
+    }
+}
+
+@media screen and (max-width:311px) {
+    Footer .footerlinks ul li:nth-child(4) a{
+        margin: 0 1rem 0 0;
+    }
+}
+
+@media screen and (max-width:485px) {
+    Footer .footerlinks ul{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (max-width:250px) {
     Footer .social{
         flex-wrap: wrap;
     }
     Footer .social .icon{
-        margin: 0 5px 5px 0;
+        margin: 0 10px 10px 0;
         width: 30px;
         height: 30px;
     }
